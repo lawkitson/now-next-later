@@ -151,7 +151,9 @@ function loadApiKey() {
     const match = env.match(/^ANTHROPIC_API_KEY=(.+)$/m);
     if (match) return match[1].trim();
   } catch {}
-  return process.env.ANTHROPIC_API_KEY;
+  const key = process.env.ANTHROPIC_API_KEY;
+  console.log('API key from env:', key ? `found (starts with ${key.slice(0, 8)}...)` : 'NOT FOUND');
+  return key;
 }
 
 const anthropic = new Anthropic({ apiKey: loadApiKey() });
@@ -215,6 +217,7 @@ Respond in this exact JSON format with no other text:
     res.json({ outcomes: enriched });
   } catch (err) {
     console.error(err);
+    console.error('Analysis error:', err.message, err.status, err.error);
     res.status(500).json({ error: 'Analysis failed. Check your API key and try again.' });
   }
 });
