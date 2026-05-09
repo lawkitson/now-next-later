@@ -1,0 +1,189 @@
+{
+  "outcomes": [],
+  "todos": [
+    {
+      "id": 1700000000000,
+      "text": "Book a family holiday for the summer",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000001,
+      "text": "Plan a proper date night with my partner",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000002,
+      "text": "Sort out the kids' bedroom — it needs a proper clear-out",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000003,
+      "text": "Call mum — haven't spoken properly in weeks",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000004,
+      "text": "Get back into running — sign up for a local 5K",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000005,
+      "text": "Book dentist appointments for the whole family",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000006,
+      "text": "Organise a weekend trip to visit old friends",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000007,
+      "text": "Clear out the garage and donate what we don't need",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000008,
+      "text": "Cook a proper Sunday roast together this weekend",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000009,
+      "text": "Sign up for the pottery class I keep looking at",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000010,
+      "text": "Read the book that's been on my nightstand for months",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000011,
+      "text": "Get the car serviced before the long drive",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000012,
+      "text": "Set up a regular savings plan for the kids",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000013,
+      "text": "Plan something special for my partner's birthday",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000014,
+      "text": "Go for a proper walk in the countryside — just us",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000015,
+      "text": "Sort out the pension paperwork I've been putting off",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000016,
+      "text": "Build a morning routine that actually sticks",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000017,
+      "text": "Take the kids swimming — they've been asking for ages",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000018,
+      "text": "Declutter my wardrobe and drop bags at the charity shop",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    },
+    {
+      "id": 1700000000019,
+      "text": "Catch up with my sister — properly, not just a text",
+      "dueDate": null,
+      "completed": false,
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "placement": "unplaced",
+      "outcomeIds": []
+    }
+  ],
+  "settings": {
+    "nowWeeks": 4,
+    "nextWeeks": 8
+  }
+}

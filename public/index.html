@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Next Later</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-banner">
+    This is a prototype — data is shared and will be lost when the server restarts.
+    <div class="demo-banner-actions">
+      <button id="reset-btn">Reset to examples</button>
+      <button id="clear-btn">Clear all</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="app-header">
+      <h1>Now Next Later</h1>
+      <button id="settings-toggle" title="Settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Settings panel -->
+    <div id="settings-panel" hidden>
+      <h3>Auto-placement from due date</h3>
+      <p class="settings-desc">When a todo has a due date but no placement set, it's automatically placed based on how far away it is.</p>
+      <div class="settings-row">
+        <span class="settings-placement now">Now</span>
+        <span>Due within</span>
+        <input type="number" id="setting-now-weeks" min="1" max="52" />
+        <span>weeks</span>
+      </div>
+      <div class="settings-row">
+        <span class="settings-placement next">Next</span>
+        <span>Due within</span>
+        <input type="number" id="setting-next-weeks" min="1" max="52" />
+        <span>weeks</span>
+      </div>
+      <div class="settings-row">
+        <span class="settings-placement later">Later</span>
+        <span>Anything beyond that</span>
+      </div>
+      <button id="save-settings-btn">Save</button>
+    </div>
+
+    <!-- Outcomes summary -->
+    <div id="outcomes-summary">
+      <h2 class="outcomes-summary-title">Outcomes</h2>
+      <div id="outcomes-summary-list"></div>
+      <div class="add-outcome-wrap">
+        <form id="add-outcome-form" hidden>
+          <input type="text" id="outcome-input" placeholder='e.g. "Feel less overwhelmed at work"' required />
+          <button type="submit">Save outcome</button>
+          <button type="button" id="cancel-outcome-btn">Cancel</button>
+        </form>
+        <div class="outcome-actions">
+          <button id="add-outcome-btn">+ Add outcome</button>
+          <button id="analyse-btn">✦ Analyse my todos</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis review panel -->
+    <div id="analysis-panel" hidden>
+      <div class="analysis-header">
+        <h3>Suggested outcomes</h3>
+        <button id="analysis-close-btn">✕</button>
+      </div>
+      <p class="analysis-desc">Based on your todos, here's what you might be working towards. Edit, accept, or dismiss each one.</p>
+      <div id="analysis-results"></div>
+    </div>
+
+    <!-- Add todo -->
+    <div id="add-todo-details" class="add-todo-details">
+      <form id="add-form">
+        <input type="text" id="todo-input" placeholder="What do you need to do?" required />
+
+        <div class="form-row">
+          <div class="date-input-wrap">
+            <input type="text" id="natural-date-input" placeholder='Due: "tomorrow", "next monday", "in 3 days"…' autocomplete="off" />
+            <button type="button" id="calendar-btn" tabindex="-1" title="Pick a date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </button>
+            <input type="date" id="due-input" tabindex="-1" />
+            <ul id="autocomplete-list" hidden></ul>
+          </div>
+          <select id="outcome-select">
+            <option value="">No outcome</option>
+          </select>
+        </div>
+
+        <p id="date-hint"></p>
+        <div id="outcome-suggestion"></div>
+
+        <div class="form-row placement-row">
+          <span class="placement-label-form">When:</span>
+          <div class="placement-btns" id="form-placement-btns">
+            <button type="button" class="placement-btn" data-placement="now">Now</button>
+            <button type="button" class="placement-btn" data-placement="next">Next</button>
+            <button type="button" class="placement-btn" data-placement="later">Later</button>
+          </div>
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Outcomes detail view -->
+    <div id="outcomes-view"></div>
+
+  </div>
+
+  <script src="dateParser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

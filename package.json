@@ -1,0 +1,14 @@
+{
+  "name": "now-next-later",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "test": "node --test server.test.js dateParser.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.1",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2"
+  }
+}
